@@ -1,4 +1,4 @@
-app = "medical-mcq-bot"
+app = "medical-hu-mcq-bot"
 primary_region = "lhr"
 
 [processes]
