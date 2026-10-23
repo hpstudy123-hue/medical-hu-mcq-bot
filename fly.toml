@@ -1,10 +1,26 @@
-app = "medical-hu-mcq-bot"
-primary_region = "lhr"
+# fly.toml app configuration file generated for medical-hu-mcq-bot on 2026-10-23T11:02:20Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'medical-hu-mcq-bot'
+primary_region = 'lhr'
+
+[build]
 
 [processes]
-  app = "python bot.py"
+  app = 'python bot.py'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
 
 [[vm]]
-  cpu_kind = "shared"
+  memory = '512mb'
+  cpu_kind = 'shared'
   cpus = 1
-  memory = "512mb"
+  memory_mb = 512
