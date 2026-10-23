@@ -1,0 +1,10 @@
+app = "medical-mcq-bot"
+primary_region = "lhr"
+
+[processes]
+  app = "python bot.py"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "512mb"
